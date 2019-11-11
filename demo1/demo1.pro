@@ -8,3 +8,5 @@ SOURCES += main.cpp \
 
 HEADERS += \
     head.h
+
+LIBS += -lboost_unit_test_framework

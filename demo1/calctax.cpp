@@ -1,7 +1,12 @@
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MODULE MyModuleName
+#include <boost/test/unit_test.hpp>
+
 #include "head.h"
 
-int calculateTax(int income)
+BOOST_AUTO_TEST_CASE( addTest )
 {
-
-    return income * 0.2;
+    // Check equality of the results of two expressions
+    BOOST_CHECK_EQUAL( (1+2) , 3 );
 }
+

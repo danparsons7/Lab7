@@ -1,9 +1,10 @@
 #include <iostream>
+#include "head.h"
 
 using namespace std;
 
-int main()
+int calculateTax(int income)
 {
-    cout << "Hello World!" << endl;
-    return 0;
+
+    return income * 0.2;
 }
