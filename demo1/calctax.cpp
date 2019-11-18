@@ -11,3 +11,9 @@ BOOST_AUTO_TEST_CASE( taxCalc )
 
 }
 
+BOOST_AUTO_TEST_CASE( taxCalc2 )
+{
+    // Check equality of the results of two expressions
+    BOOST_CHECK_EQUAL( calculateTax(10000) , 2000 );
+
+}
