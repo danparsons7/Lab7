@@ -4,3 +4,4 @@
 #endif // HEAD_H
 
 int calculateTax(int income);
+int calculateTaxFromAnnualIncome(int annualIncome);

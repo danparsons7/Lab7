@@ -37,3 +37,8 @@ int calculateTax(int income)
 
     return total;
 }
+
+int calculateTaxFromAnnualIncome(int annualIncome)
+{
+
+}
