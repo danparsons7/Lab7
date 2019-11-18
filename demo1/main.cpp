@@ -3,8 +3,10 @@
 
 using namespace std;
 
+float lowerTax = 0.2;
+
 int calculateTax(int income)
 {
 
-    return income * 0.2;
+    return income * lowerTax;
 }
