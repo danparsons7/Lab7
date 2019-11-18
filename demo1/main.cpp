@@ -5,24 +5,35 @@ using namespace std;
 
 float lowerTax = 0.2;
 float upperTax = 0.4;
+float additionalTax = 0.45;
+
+int firstBracket = 37500;
+int secondBracket = 150000;
 
 int calculateTax(int income)
 {
+    int total = 0;
 
-    int first = 0;
-    int second = 0;
-
-    if (income > 37500)
+    if (income > firstBracket && income < secondBracket)
     {
-        first = 37500 * lowerTax;
+        total += firstBracket * lowerTax;
 
-        second = (income - 37500) * upperTax;
+        total += (income - firstBracket) * upperTax;
+    }
+
+    else if (income > secondBracket)
+    {
+        total += firstBracket * lowerTax;
+
+        total += (secondBracket - firstBracket) * upperTax;
+
+        total += (income - secondBracket) * additionalTax;
     }
 
     else
     {
-        first = income * lowerTax;
+        total += income * lowerTax;
     }
 
-    return (first + second);
+    return total;
 }
