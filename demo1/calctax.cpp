@@ -4,9 +4,10 @@
 
 #include "head.h"
 
-BOOST_AUTO_TEST_CASE( addTest )
+BOOST_AUTO_TEST_CASE( taxCalc )
 {
     // Check equality of the results of two expressions
-    BOOST_CHECK_EQUAL( (1+2) , 3 );
+    BOOST_CHECK_EQUAL( calculateTax(10000) , 2000 );
+
 }
 
