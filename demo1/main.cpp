@@ -9,6 +9,7 @@ float additionalTax = 0.45;
 
 int firstBracket = 37500;
 int secondBracket = 150000;
+int personalAllowance = 12500;
 
 int calculateTax(int income)
 {
@@ -40,5 +41,12 @@ int calculateTax(int income)
 
 int calculateTaxFromAnnualIncome(int annualIncome)
 {
+    int total = 0;
 
+    if (annualIncome > personalAllowance)
+    {
+        total += (annualIncome - personalAllowance) * lowerTax;
+    }
+
+    return total;
 }

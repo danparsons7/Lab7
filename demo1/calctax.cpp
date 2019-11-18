@@ -24,3 +24,17 @@ BOOST_AUTO_TEST_CASE( taxCalc3 )
     BOOST_CHECK_EQUAL( calculateTax(200000) , 75000 );
 
 }
+
+BOOST_AUTO_TEST_CASE( newTax )
+{
+    // Check equality of the results of two expressions
+    BOOST_CHECK_EQUAL( calculateTaxFromAnnualIncome(5000) , 0 );
+
+}
+
+BOOST_AUTO_TEST_CASE( newTax2 )
+{
+    // Check equality of the results of two expressions
+    BOOST_CHECK_EQUAL( calculateTaxFromAnnualIncome(20000) , 1500 );
+
+}
